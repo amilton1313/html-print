@@ -1,0 +1,113 @@
+
+    
+    body {
+    margin:0;
+    padding:0;
+    line-height: 1.4em;
+
+    }
+
+    .div01 {
+        height: 200PX;
+        width: 90%;
+        margin: 10px 100px 50px 50px;
+
+        
+    }
+
+    .div02 {
+        height: 20px;
+        background-color: green;
+    }
+
+    .div10 {
+        display: flex;
+        flex-direction: row;
+        background-color: grey;
+        height: 20px;
+    }
+    .div11 {
+        flex: 1;
+    }
+    .div12 {
+        flex: 5;
+    }
+    .div13 {
+        flex: 5;
+    }
+
+    .div20 {
+        display: flex;
+        flex-direction: row;
+        background-color: white;
+        height: 20px;
+    }
+    .div21 {
+        flex: 1;
+    }
+    .div22 {
+        flex: 5;
+    }
+    .div23 {
+        flex: 5;
+    }
+
+    .divRodape {
+        margin: 30px;
+        display: flex;
+        
+    }
+
+    @page {
+        margin: 0.5cm;
+        size: landscape;
+        }
+
+
+
+    @media print {
+        body * {
+            visibility: hidden;
+          }
+
+          table * {
+            visibility: hidden;
+          }  
+
+        .div01 {
+            visibility: visible;
+            
+            height: 200PX;
+            width: 90%;
+            margin: 10px 100px 50px 50px;
+
+       
+        }
+
+        .div10 {
+            box-shadow: 0 0 0 1000px grey inset;
+        }
+
+        .div20 {
+            box-shadow: 0 0 0 1000px white inset;
+        }
+
+        .div10, .div20 {
+            display: flex;
+            flex-direction: row;
+            visibility: visible;
+            width: 100%;
+            height: 20px;
+        }
+        .div11, .div21 {
+            flex: 1;  
+            visibility: visible;
+    
+        }
+        .div12, .div13, .div22, .div23 {
+            flex: 5;
+            visibility: visible;
+    
+        }
+
+    }    
